@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Beachfront Property Design System - Ocean & Luxury Theme */
+
+@layer base {
+  :root {
+    /* Ocean-inspired color palette */
+    --background: 0 0% 100%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    /* Ocean blues - primary brand colors */
+    --primary: 200 95% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 195 100% 60%;
+    --primary-dark: 210 100% 30%;
+
+    /* Sandy beige accents */
+    --secondary: 45 25% 85%;
+    --secondary-foreground: 210 20% 15%;
+    --sand: 42 30% 75%;
+    --sand-dark: 38 25% 65%;
+
+    /* Luxury gold accents */
+    --accent: 43 96% 65%;
+    --accent-foreground: 210 20% 15%;
+    --gold: 48 100% 50%;
+    --gold-light: 50 100% 70%;
+
+    /* Neutral tones */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 200 95% 45%;
+
+    --radius: 0.75rem;
+
+    /* Ocean gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--gold)));
+    --gradient-beach: linear-gradient(180deg, hsl(var(--primary-light) / 0.1), hsl(var(--sand) / 0.3));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--primary-dark) / 0.9));
+
+    /* Elegant shadows */
+    --shadow-ocean: 0 10px 40px -15px hsl(var(--primary) / 0.4);
+    --shadow-luxury: 0 20px 60px -20px hsl(var(--accent) / 0.3);
+    --shadow-card: 0 4px 20px -8px hsl(var(--primary) / 0.15);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Ocean wave animation */
+  .wave-animation {
+    background: linear-gradient(-45deg, hsl(var(--primary) / 0.1), hsl(var(--primary-light) / 0.2), hsl(var(--primary) / 0.1), hsl(var(--primary-light) / 0.2));
+    background-size: 400% 400%;
+    animation: wave 8s ease-in-out infinite;
+  }
+
+  /* Floating animation for property cards */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Parallax scroll effect */
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Gradient text effects */
+  .text-gradient-ocean {
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-sunset {
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Button hover effects */
+  .btn-ocean {
+    background: var(--gradient-ocean);
+    box-shadow: var(--shadow-ocean);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-ocean:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-luxury);
+  }
+
+  .btn-luxury {
+    background: var(--gradient-sunset);
+    box-shadow: var(--shadow-luxury);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-luxury:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    transition: var(--transition-smooth);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-luxury);
+  }
+
+  /* Animation delays for staggered effects */
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animation-delay-900 {
+    animation-delay: 900ms;
+  }
+
+  .animation-delay-1200 {
+    animation-delay: 1200ms;
+  }
+
+  /* Scroll reveal animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .scroll-reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .scroll-reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Image overlay effects */
+  .image-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-hero);
+    opacity: 0;
+    transition: var(--transition-smooth);
+  }
+
+  .image-overlay:hover::after {
+    opacity: 0.7;
+  }
+}
