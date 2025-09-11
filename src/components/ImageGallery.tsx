@@ -15,6 +15,7 @@ import investmentImage from "@/assets/P9.jpg";
 import investmentImage1 from "@/assets/P10.png";
 import investmentImage3 from "@/assets/P12.png";
 
+
 import oheroImage from "@/assets/im1.jpeg";
 import oheroImage1 from "@/assets/im3.jpeg";
 import oheroImage2 from "@/assets/im2.jpeg";
