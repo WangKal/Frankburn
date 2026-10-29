@@ -50,7 +50,7 @@ export const useStaggeredAnimation = (count: number, delay: number = 100) => {
 
   useEffect(() => {
     if (isVisible) {
-      const timeouts: NodeJS.Timeout[] = [];
+      const timeouts: ReturnType<typeof setTimeout>[] = [];
       
       for (let i = 0; i < count; i++) {
         const timeout = setTimeout(() => {
