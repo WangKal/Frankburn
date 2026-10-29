@@ -63,20 +63,39 @@ export interface Property {
 }
 
 // Listing photos from the brochure are CDN asset pointers named "<slug>-<n>.jpg.asset.json"
-const listingFiles = import.meta.glob("../assets/listings/*.asset.json", {
-  eager: true,
-  import: "default",
-}) as Record<string, { url: string }>;
+// Load property images directly from src/assets/listings
+const listingFiles = import.meta.glob(
+  "../assets/listings/*.{jpg,jpeg,png,JPG,JPEG,PNG,webp}",
+  {
+    eager: true,
+    query: "?url",
+    import: "default",
+  }
+) as Record<string, string>;
 
-const photos = (prefix: string, captions: (string | undefined)[] = []): PropertyImage[] =>
+const photos = (
+  prefix: string,
+  captions: (string | undefined)[] = []
+): PropertyImage[] =>
   Object.entries(listingFiles)
-    .map(([path, asset]) => {
-      const match = path.match(new RegExp(`/${prefix}-(\\d+)\\.jpg\\.asset\\.json$`));
-      return match ? { n: Number(match[1]), src: asset.url } : null;
+    .map(([path, url]) => {
+      const filename = path.split("/").pop() ?? "";
+
+      const match = filename.match(
+        new RegExp(`^${prefix}-(\\d+)\\.(jpg|jpeg|png|webp)$`, "i")
+      );
+
+      return match
+        ? { n: Number(match[1]), src: url }
+        : null;
     })
     .filter((x): x is { n: number; src: string } => x !== null)
     .sort((a, b) => a.n - b.n)
-    .map(({ n, src }) => ({ src, caption: captions[n - 1] }));
+    .map(({ n, src }) => ({
+      src,
+      caption: captions[n - 1],
+    }));
+
 
 const reorder = (imgs: PropertyImage[], first: number) =>
   imgs.length > first ? [imgs[first], ...imgs.filter((_, i) => i !== first)] : imgs;
