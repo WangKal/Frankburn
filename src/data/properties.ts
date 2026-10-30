@@ -439,7 +439,7 @@ export const properties: Property[] = [
     type: "Land",
     location: "Mtwapa, Kilifi",
     county: "Kilifi",
-    price: 1_600_000,
+    price: 4_000_000,
     size: "Approx. 0.0921 acres",
     summary: "A freehold residential plot near Naivas/Petrocity and Bambino Academy.",
     description: [
