@@ -107,7 +107,7 @@ export const properties: Property[] = [
     type: "Land",
     location: "Opposite Sand Pipper International School, Malindi",
     county: "Kilifi",
-    price: 1_600_000,
+    price: 4_000_000,
     priceLabel: "From",
     size: "18 acres · 68 quarter-acre + 1 premium acre",
     summary:
