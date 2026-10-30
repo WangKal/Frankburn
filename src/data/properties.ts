@@ -133,8 +133,8 @@ export const properties: Property[] = [
       "Next to Seaview Resort, Lawfords Hotel & Ocean Beach Resort",
     ],
     options: [
-      { name: "Quarter-acre homesite", price: "From KSh 1,600,000", detail: "849 m² · 23.20 m × 36.60 m · 68 plots available" },
-      { name: "Premium 1-acre oceanfront", price: "KSh 30,000,000", detail: "3,397 m² · 92.80 m × 36.60 m · single plot" },
+      { name: "Quarter-acre homesite", price: "From KSh 4,000,000", detail: "849 m² · 23.20 m × 36.60 m · 68 plots available" },
+      { name: "Premium 1-acre oceanfront", price: "KSh 75,000,000", detail: "3,397 m² · 92.80 m × 36.60 m · single plot" },
     ],
     images: [
       { src: beachP6, caption: "The beach at Frankburn" },
