@@ -16,6 +16,8 @@ import beachG1 from "@/assets/G1.png";
 import beachG2 from "@/assets/G2.png";
 import beachAerial from "@/assets/beachfront/beachfront-aerial.jpg.asset.json";
 import beachSunset from "@/assets/beachfront/beachfront-sunset.jpg.asset.json";
+import taitaHotelDay from "@/assets/listings/taita-luxury-hotel-1.jpg.asset.json";
+import taitaHotelNight from "@/assets/listings/taita-luxury-hotel-2.jpg.asset.json";
 
 export type PropertyType = "Residential" | "Commercial" | "Land" | "Hospitality";
 
@@ -210,6 +212,50 @@ export const properties: Property[] = [
     mapQuery: "Mariakani, Kilifi, Kenya",
     featured: true,
     badge: "Resort",
+  },
+  {
+    slug: "taita-luxury-hotel-wundanyi",
+    title: "Taita Luxury Hotel & Milimani Hardware",
+    type: "Hospitality",
+    location: "Opposite KWFT Bank, approximately 200 m from Wundanyi Post Office, Wundanyi Town",
+    county: "Taita-Taveta",
+    price: 65_000_000,
+    priceLabel: "Indicative value",
+    size: "0.068 ha / 0.168 acres",
+    summary: "A four-level hospitality and commercial property in Wundanyi, combining 26 self-contained guest rooms with a ground-floor hardware shop and bar, plus a restaurant and conference hall.",
+    description: [
+      "Taita Luxury Hotel & Milimani Hardware is a four-level commercial property in Wundanyi Town, Taita-Taveta County. It is opposite KWFT Bank and approximately 200 metres from Wundanyi Post Office.",
+      "The ground floor accommodates a hardware shop and bar; the first and second floors each contain 13 self-contained guest rooms; and the third floor has a restaurant and conference hall.",
+      "The flyer gives an indicative property value of KSh 65,000,000. The property has a stated land area of 0.068 hectares (0.168 acres), leasehold tenure, water and electricity, and tar-surfaced road access."
+    ],
+    facts: [
+      { label: "Indicative property value", value: "KSh 65,000,000" },
+      { label: "Land area", value: "0.068 ha / 0.168 acres" },
+      { label: "Tenure", value: "Leasehold" },
+      { label: "Building levels", value: "4" },
+      { label: "Guest rooms", value: "26 self-contained rooms" },
+      { label: "Ground floor", value: "Hardware shop + bar" },
+      { label: "Third floor", value: "Restaurant + conference hall" },
+      { label: "Services", value: "Water + electricity" },
+      { label: "Road access", value: "Tar-surfaced road" }
+    ],
+    features: [
+      "26 self-contained guest rooms across the first and second floors",
+      "Ground-floor hardware shop and bar",
+      "Restaurant and conference hall on the third floor",
+      "Water and electricity",
+      "Tar-surfaced road access",
+      "Opposite KWFT Bank in Wundanyi Town"
+    ],
+    notes: [
+      "The flyer describes KSh 65,000,000 as an indicative property value.",
+      "Property details are subject to verification."
+    ],
+    images: photos("taita-luxury-hotel", ["Taita Luxury Hotel — daytime exterior", "Taita Luxury Hotel — illuminated night exterior"]),
+    
+    mapQuery: "Wundanyi Town, Taita-Taveta County, Kenya",
+    featured: true,
+    badge: "Hotel · Commercial"
   },
   {
     slug: "kibokoni-50-acre-oceanfront",
